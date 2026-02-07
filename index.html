@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Danh mục sách</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h2>📖 Danh mục sách</h2>
+
+<div class="book-list">
+    <div class="book">
+        <img src="images/book1.jpg">
+        <h3>Truyện Teen</h3>
+        <a href="detail.html">Xem chi tiết</a>
+    </div>
+
+    <div class="book">
+        <img src="images/book2.jpg">
+        <h3>Kỹ năng sống</h3>
+        <a href="detail.html">Xem chi tiết</a>
+    </div>
+
+    <div class="book">
+        <img src="images/book3.jpg">
+        <h3>Học tập</h3>
+        <a href="detail.html">Xem chi tiết</a>
+    </div>
+</div>
+
+</body>
+</html>
+<h2>📚 Truyện Teen Hay</h2>
+<img src="images/book1.jpg" width="200">
+
+<p>
+Đây là những câu chuyện gần gũi với lứa tuổi học sinh,
+giúp giải trí và học hỏi thêm nhiều bài học ý nghĩa.
+</p>
+
+<video controls width="300">
+    <source src="images/review.mp4" type="video/mp4">
+</video>
+<h2>🔐 Đăng nhập</h2>
+
+<form>
+    <input type="text" placeholder="Tên đăng nhập"><br><br>
+    <input type="password" placeholder="Mật khẩu"><br><br>
+    <button>Đăng nhập</button>
+</form>
+<h2>📞 Liên hệ</h2>
+
+<form>
+    <input type="text" placeholder="Họ tên"><br><br>
+    <input type="email" placeholder="Email"><br><br>
+    <textarea placeholder="Nội dung"></textarea><br><br>
+    <button>Gửi</button>
+</form>
+function thongBao() {
+    alert("Cảm ơn bạn đã ghé thăm Thế Giới Sách Teen!");
+}
+<button onclick="thongBao()">Nhấn thử</button>
+@media (max-width: 768px) {
+    .book-list {
+        flex-direction: column;
+        align-items: center;
+    }
+}
