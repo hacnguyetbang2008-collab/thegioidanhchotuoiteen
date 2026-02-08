@@ -1,69 +1,128 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
-    <title>Danh mục sách</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Thế giới sách tuổi teen</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <script src="script.js" defer></script>
 </head>
+
 <body>
+    <!-- Header -->
+    <header class="bg-primary text-white p-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <h1>📚 Thế giới sách tuổi teen</h1>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="#home">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#books">Danh mục</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#search">Tìm kiếm</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#login">Đăng nhập</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#contact">Liên hệ</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#blog">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<h2>📖 Danh mục sách</h2> 
+    <!-- Trang chủ -->
+    <section id="home" class="container my-5">
+        <tag style="color: RED;">
+            <h3><b>GIỚI THIỆU</b></h3>
+        </tag>
+        <p><b>Hãy cùng bước vào thế giới sách tuổi teen – nơi mỗi trang sách mở ra một hành trình mới, từ những câu chuyện ngắn đầy
+        rung động, kiến thức khoa học kỳ thú, đến những trang tình cảm ngọt ngào và sắc màu nghệ thuật đầy sáng tạo…</b></p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/9vj2c78gBNw?si=eeWntYXp4dFhHOyh"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section>
 
-<div class="book-list">
-    <div class="book">
-        <img src="images/book1.jpg">
-        <h3>Truyện Teen</h3>
-        <a href="detail.html">Xem chi tiết</a>
-    </div>
+    <!-- Danh mục sách -->
+    <section id="books" class="container my-5">
+        <h2>Danh mục sách</h2>
+        <div class="row">
+            <div class="col-md-3 card p-3 m-2">📖 Truyện ngắn</div>
+            <div class="col-md-3 card p-3 m-2">🌍 Khoa học</div>
+            <div class="col-md-3 card p-3 m-2">❤️ Tình cảm</div>
+            <div class="col-md-3 card p-3 m-2">🎨 Nghệ thuật</div>
+        </div>
+        <tag style="color: Yellow;"><h3><b>TOP CÁC QUYỂN SÁCH NỔI TIẾNG</b></h3></tag>
+        <table class="table table-striped mt-3">
+            <tr>
+                <th>Tên sách</th>
+                <th>Tác giả</th>
+                <th>Thể loại</th>
+            </tr>
+            <tr>
+                <td>Cây cam ngọt của tôi</td>
+                <td>José Mauro de Vasconcelos</td>
+<td>Tiểu thuyết</td>
+            </tr>
+            <tr>
+                <td>Nhà giả kim</td>
+                <td>Paulo Coelho</td>
+                <td>Tiểu thuyết</td>
+            </tr>
+            <tr>
+                <td>Hãy là tất cả, hoặc không là gì</td>
+                <td>Xu</td>
+                <td>Truyện ngắn</td>
+            </tr>
+        </table>
+    </section>
 
-    <div class="book">
-        <img src="images/book2.jpg">
-        <h3>Kỹ năng sống</h3>
-        <a href="detail.html">Xem chi tiết</a>
-    </div>
+    <!-- Tìm kiếm -->
+    <section id="search" class="container my-5">
+        <h2>Tìm kiếm sách</h2>
+        <input type="text" id="searchBox" class="form-control w-50" placeholder="Nhập tên sách...">
+        <button class="btn btn-primary mt-2" onclick="search()">Tìm</button>
+        <p id="searchResult" class="mt-2"></p>
+    </section>
 
-    <div class="book">
-        <img src="images/book3.jpg">
-        <h3>Học tập</h3>
-        <a href="detail.html">Xem chi tiết</a>
-    </div>
-</div>
+    <!-- Đăng nhập -->
+    <section id="login" class="container my-5">
+        <h2>Đăng nhập / Đăng ký</h2>
+        <form class="w-50">
+            <label>Tên người dùng:</label>
+            <input type="text" class="form-control" required>
+            <label>Mật khẩu:</label>
+            <input type="password" class="form-control" required>
+            <button type="submit" class="btn btn-success mt-2">Đăng nhập</button>
+        </form>
+    </section>
 
+    <!-- Liên hệ -->
+    <section id="contact" class="container my-5">
+        <h2>Liên hệ</h2>
+        <form class="w-50">
+            <label>Email:</label>
+            <input type="email" class="form-control" required>
+            <label>Nội dung:</label>
+            <textarea class="form-control" required></textarea>
+            <button type="submit" class="btn btn-warning mt-2">Gửi</button>
+        </form>
+        <audio controls class="mt-3">
+            <source src="sample.mp3" type="audio/mpeg">
+        </audio>
+    </section>
+
+    <!-- Blog -->
+    <section id="blog" class="container my-5">
+        <h2>Blog & Tin tức</h2>
+        <ul>
+            <a href="https://hoanghamobile.com/tin-tuc/top-10-cuon-sach-hay-nen-…tid=AfmBOorEfzSLVlCeZ5oddhdAaZnbeTJIRib1ro_HJJhu1tSR4XmyVAwi" target="_blank">Top 10 sách tuổi teen nên đọc</a><br>
+            <a href="https://znews.vn/sach-hay.html"
+                target="_blank">Thế giới sách</a>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center p-3">
+        <p>&copy; 2026 - Thế giới sách tuổi teen</p>
+    </footer>
 </body>
+
 </html>
-<h2>📚 Truyện Teen Hay</h2>
-<img src="images/book1.jpg" width="200">
-
-<p>
-Đây là những câu chuyện gần gũi với lứa tuổi học sinh,
-giúp giải trí và học hỏi thêm nhiều bài học ý nghĩa.
-</p>
-
-<video controls width="300">
-    <source src="images/review.mp4" type="video/mp4">
-</video>
-<h2>🔐 Đăng nhập</h2>
-
-<form>
-    <input type="text" placeholder="Tên đăng nhập"><br><br>
-    <input type="password" placeholder="Mật khẩu"><br><br>
-    <button>Đăng nhập</button>
-</form>
-<h2>📞 Liên hệ</h2>
-
-<form>
-    <input type="text" placeholder="Họ tên"><br><br>
-    <input type="email" placeholder="Email"><br><br>
-    <textarea placeholder="Nội dung"></textarea><br><br>
-    <button>Gửi</button>
-</form>
-function thongBao() {
-    alert("Cảm ơn bạn đã ghé thăm Thế Giới Sách Teen!");
-}
-<button onclick="thongBao()">Nhấn thử</button>
-@media (max-width: 768px) {
-    .book-list {
-        flex-direction: column;
-        align-items: center;
-    }
-}
